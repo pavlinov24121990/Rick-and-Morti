@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  box-shadow: -2px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  p {
+    color: #212121;
+    font-family: Karla;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

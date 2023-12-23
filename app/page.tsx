@@ -1,7 +1,13 @@
+'use server'
+import MainPicture from "../components/mainPicture";
+import MainPlusSearchPlusPaginate from "@/components/mainPlusSearchPlusPaginate";
 
-export default function Home() {
+export default async function Home() {
+
   return (
-    <main>
-    </main>
+    <>
+      <MainPicture />
+      <MainPlusSearchPlusPaginate />
+    </>
   )
 }
