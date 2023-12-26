@@ -1,0 +1,175 @@
+.character-show {
+  position: relative;
+  text-align: center;
+  .character-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    img {
+      border-radius: 50%;
+      border: 5px solid #f2f2f7;
+    }
+  }
+  .character-link {
+    position: absolute;
+    top: 28px;
+    left: 241px;
+    a {
+      color: #000;
+      text-decoration: none;
+      font-family: Karla;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      display: flex;
+      align-items: center;
+    }
+  }
+  h2 {
+    color: #081f32;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 42px;
+  }
+  .informations-episodes {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: start;
+    div {
+      min-width: 413px;
+    }
+    .informations {
+      margin-right: 36px;
+      .informations-block {
+        color: #8e8e93;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        margin-bottom: 45px;
+      }
+      ul {
+        li {
+          padding-left: 16px;
+          padding-top: 9px;
+          p:first-child {
+            color: #081f32;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+          }
+          p:nth-child(2) {
+            color: #6e798c;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.25px;
+            margin-bottom: 12px;
+          }
+          i {
+            display: block;
+            border-bottom: 1px solid rgba(33, 33, 33, 0.08);
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99997 6L8.58997 7.41L13.17 12L8.58997 16.59L9.99997 18L16 12L9.99997 6Z" fill="%238E8E93"/></svg>'); /* Вставьте код SVG в data URI */
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 24px 24px;
+            padding-right: 34px;
+            span {
+              width: 100%;
+            }
+          }
+          &:last-child {
+            margin-bottom: 36px;
+          }
+        }
+      }
+    }
+    .episodes {
+      .episodes-block {
+        color: #8e8e93;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        margin-bottom: 45px;
+      }
+      ul {
+        overflow-y: auto;
+        max-height: 360px;
+        li {
+          padding-top: 10px;
+          a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99997 6L8.58997 7.41L13.17 12L8.58997 16.59L9.99997 18L16 12L9.99997 6Z" fill="%238E8E93"/></svg>'); /* Вставьте код SVG в data URI */
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 24px 24px;
+            padding-right: 34px;
+            p {
+              color: #081f32;
+              font-family: Roboto;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 24px;
+              letter-spacing: 0.15px;
+              &:nth-child(2) {
+                color: #6e798c;
+                font-family: Roboto;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0.25px;
+              }
+              &:nth-child(3) {
+                color: #8e8e93;
+                font-family: Roboto;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 16px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                margin-bottom: 16px;
+              }
+            }
+            i {
+              display: block;
+              border-bottom: 1px solid rgba(33, 33, 33, 0.08);
+            }
+            span {
+              width: 100%;
+            }
+          }
+          &:last-child {
+            margin-bottom: 36px;
+          }
+        }
+      }
+    }
+  }
+}
