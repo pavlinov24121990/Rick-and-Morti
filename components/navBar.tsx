@@ -24,7 +24,7 @@ export default function NavBar() {
             <Link onClick={() => setNavLink("Characters")} className={navLink === "Characters" ? "active" : ""} href='/'>Characters</Link>
           </li>
           <li>
-            <Link onClick={() => setNavLink("Locations")} className={navLink === "Locations" ? "active" : ""} href=''>Locations</Link>
+            <Link onClick={() => setNavLink("Locations")} className={navLink === "Locations" ? "active" : ""} href='/locations'>Locations</Link>
           </li>
           <li>
             <Link onClick={() => setNavLink("Episodes")} className={navLink === "Episodes" ? "active" : ""} href=''>Episodes</Link>

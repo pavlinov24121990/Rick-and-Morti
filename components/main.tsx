@@ -33,7 +33,7 @@ const Main: React.FC = () => {
   return (
     <div className="main">
       {charactersToShow?.map((character) => (
-        <Link href={`/${character.id}`} key={character.id}>
+        <Link href={`/character/${character.id}`} key={character.id}>
           <div>
             <Image src={character.image} width={240} height={224} alt={`Main img of ${character.name}`} />
             <h1>{character.name}</h1>
