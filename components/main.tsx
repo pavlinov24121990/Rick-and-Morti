@@ -1,7 +1,6 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import { CharacterList } from '@/interface/interface';
 import '/scss/main.scss';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/provider/redux/store";

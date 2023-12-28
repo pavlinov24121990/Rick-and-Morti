@@ -1,17 +1,25 @@
 'use client'
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from '../foto/Logo.svg';
 import '../scss/navBar.scss';
 import { rotateOut } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
+import { NavigatePanelClass } from "@/helpers/isOnLocationsPage";
+import { usePathname } from "next/navigation";
 
 const Flashe = styled.div`animation: 10s ${keyframes`${rotateOut}`} infinite`;
 
 export default function NavBar() {
+
+  const router = usePathname();
   
   const [navLink, setNavLink] = useState<string>("Characters")
+
+  useEffect(() => {
+    setNavLink(NavigatePanelClass(router))
+  }, [router]);
 
   return (
     <div className="navbar">
@@ -21,13 +29,13 @@ export default function NavBar() {
       <div>
         <ul>
           <li>
-            <Link onClick={() => setNavLink("Characters")} className={navLink === "Characters" ? "active" : ""} href='/'>Characters</Link>
+            <Link className={navLink === "Characters" ? "active" : ""} href='/'>Characters</Link>
           </li>
           <li>
-            <Link onClick={() => setNavLink("Locations")} className={navLink === "Locations" ? "active" : ""} href='/locations'>Locations</Link>
+            <Link className={navLink === "Locations" ? "active" : ""} href='/locations'>Locations</Link>
           </li>
           <li>
-            <Link onClick={() => setNavLink("Episodes")} className={navLink === "Episodes" ? "active" : ""} href=''>Episodes</Link>
+            <Link className={navLink === "Episodes" ? "active" : ""} href='/episodes'>Episodes</Link>
           </li>
         </ul>
       </div>

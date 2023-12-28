@@ -5,6 +5,9 @@ interface FiltersState {
   species: string;
   gender: string;
   name: string;
+  type: string;
+  dimension: string;
+  nameLocations: string;
 }
 
 const initialState: FiltersState = {
@@ -12,8 +15,10 @@ const initialState: FiltersState = {
   species: '',
   gender: '',
   name: '',
+  type: '',
+  dimension: '',
+  nameLocations: '',
 };
-
 const filtersSlice = createSlice({
   name: 'filters',
   initialState,
@@ -30,8 +35,17 @@ const filtersSlice = createSlice({
     setName: (state, action: PayloadAction<string>) => {
       state.name = action.payload;
     },
+    setType: (state, action: PayloadAction<string>) => {
+      state.type = action.payload;
+    },
+    setDimension: (state, action: PayloadAction<string>) => {
+      state.dimension = action.payload;
+    },
+     setNameLocations: (state, action: PayloadAction<string>) => {
+      state.nameLocations = action.payload;
+    },
   },
 });
 
-export const { setStatus, setSpecies, setGender, setName } = filtersSlice.actions;
+export const { setStatus, setSpecies, setGender, setName, setType, setDimension, setNameLocations } = filtersSlice.actions;
 export default filtersSlice.reducer;
