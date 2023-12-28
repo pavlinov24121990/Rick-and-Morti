@@ -3,12 +3,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import filtersReducer from './filters';
 import paginationSliceReducer from './paginationSlice';
 import charactersSliceReducer from './charactersSlice'
+import locationsReducer from './locations'
 
 const store = configureStore({
   reducer: {
     filters: filtersReducer,
     paginationSlice: paginationSliceReducer,
     charactersSlice: charactersSliceReducer,
+    locations: locationsReducer,
   },
 });
 

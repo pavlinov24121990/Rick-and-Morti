@@ -5,8 +5,11 @@ import Link from "next/link"
 import { fetchCharacterShow, fetchEpisodeShow } from "./api/route"
 import '/scss/characterShow.scss'
 import arrowLink from '/foto/arrowLink.svg'
+import ButtonGoBack from "@/app/UI/buttonGoBack"
+import { extractLocationId } from "@/helpers/extractUrlId"
 
 export default async function Home({ params }: { params: { id: number } }) {
+
   
   const CharacterShow = await fetchCharacterShow(params.id)
   const episodesData = await Promise.all(
@@ -15,15 +18,11 @@ export default async function Home({ params }: { params: { id: number } }) {
       return response;
     })
   );
-  
+  const locationId = extractLocationId(CharacterShow.location.url);
+
   return (
     <div className="character-show">
-      <div className='character-link'>
-        <Link href="/">
-          <Image src={arrowLink} width={24} height={24} alt='Logo Link' />
-          GO BACK
-        </Link>
-      </div>
+      <ButtonGoBack />
       <div className='character-img'>
         <Image src={CharacterShow.image} width={300} height={300} alt='Logo Rick and Morti' />
       </div>
@@ -58,7 +57,7 @@ export default async function Home({ params }: { params: { id: number } }) {
               <i></i>
             </li>
             <li>
-              <Link href=''>
+              <Link href={`/locations/${locationId}`}>
                 <span>
                   <p>Location</p>
                   <p>{CharacterShow.location.name}</p>

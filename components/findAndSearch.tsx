@@ -31,7 +31,7 @@ export default function FindAndSearch() {
           <option value="genderless">genderless</option>
           <option value="unknown">unknown</option>
       </select>
-        <select defaultValue={status} onChange={(event) => dispatch(setStatus(handleChange(event)))}>
+      <select defaultValue={status} onChange={(event) => dispatch(setStatus(handleChange(event)))}>
         <option value="">Status</option>
         <option value="Alive">Alive</option>
         <option value="Dead">Dead</option>

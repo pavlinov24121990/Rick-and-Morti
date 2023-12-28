@@ -1,3 +1,3 @@
-export const clickLoadMore = (loadMore: number): number => {
-  return loadMore === 0 ? loadMore + 12 : loadMore - 4
+export const clickLoadMore = (data: number): number => {
+  return data === 0 ? data + 12 : data - 4
 }
