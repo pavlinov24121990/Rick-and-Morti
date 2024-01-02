@@ -6,6 +6,8 @@ interface PaginationState {
   loadMore: number;
   loadMoreLocations: number;
   currentPageLocations: number;
+  currentPageEpisodes: number,
+  loadMoreEpisodes: number,
 }
 
 const initialState: PaginationState = {
@@ -14,6 +16,8 @@ const initialState: PaginationState = {
   loadMore: 12,
   loadMoreLocations: 12,
   currentPageLocations: 1,
+  currentPageEpisodes: 1,
+  loadMoreEpisodes: 12,
 };
 
 const paginationSlice = createSlice({
@@ -26,6 +30,9 @@ const paginationSlice = createSlice({
     setCurrentPageLocations: (state, action: PayloadAction<number>) => {
       state.currentPageLocations = action.payload;
     },
+    setCurrentPageEpisodes: (state, action: PayloadAction<number>) => {
+      state.currentPageEpisodes = action.payload;
+    },
     setLoadMoreValid: (state, action: PayloadAction<boolean>) => {
       state.loadMoreValid = action.payload;
     },
@@ -35,8 +42,11 @@ const paginationSlice = createSlice({
      setLoadMoreLocations: (state, action: PayloadAction<number>) => {
       state.loadMoreLocations = action.payload;
     },
+    setLoadMoreEpisodes: (state, action: PayloadAction<number>) => {
+      state.loadMoreEpisodes = action.payload;
+    },
   },
 });
 
-export const { setCurrentPage, setLoadMoreValid, setLoadMore, setLoadMoreLocations, setCurrentPageLocations } = paginationSlice.actions;
+export const { setCurrentPage, setLoadMoreValid, setLoadMore, setLoadMoreLocations, setCurrentPageLocations, setCurrentPageEpisodes, setLoadMoreEpisodes } = paginationSlice.actions;
 export default paginationSlice.reducer;
