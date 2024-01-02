@@ -4,6 +4,7 @@ import filtersReducer from './filters';
 import paginationSliceReducer from './paginationSlice';
 import charactersSliceReducer from './charactersSlice'
 import locationsReducer from './locations'
+import episodesReducer from './episodes'
 
 const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ const store = configureStore({
     paginationSlice: paginationSliceReducer,
     charactersSlice: charactersSliceReducer,
     locations: locationsReducer,
+    episodes: episodesReducer,
   },
 });
 

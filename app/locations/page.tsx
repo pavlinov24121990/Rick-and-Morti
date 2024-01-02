@@ -1,6 +1,6 @@
 'use server'
 
-import MainPictureLocations from "./companents/mainPictureLocations";
+import MainPictureLocations from "../UI/mainPictureLocations";
 import MainAndFilters from "./companents/mainAndFilters";
 
 export default async function Home() {

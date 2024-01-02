@@ -71,3 +71,18 @@ export interface Resident {
   species: string;
   image: string;
 }
+
+export interface Episode {
+  air_date: string;
+  characters: string[];
+  created: string;
+  episode: string;
+  id: number;
+  name: string;
+  url: string;
+}
+
+export interface EpisodesAndInfo {
+  info: LocationInfo;
+  results: Episode[];
+}

@@ -8,6 +8,7 @@ interface FiltersState {
   type: string;
   dimension: string;
   nameLocations: string;
+  nameEpisodes: string;
 }
 
 const initialState: FiltersState = {
@@ -18,6 +19,7 @@ const initialState: FiltersState = {
   type: '',
   dimension: '',
   nameLocations: '',
+  nameEpisodes: '',
 };
 const filtersSlice = createSlice({
   name: 'filters',
@@ -44,8 +46,11 @@ const filtersSlice = createSlice({
      setNameLocations: (state, action: PayloadAction<string>) => {
       state.nameLocations = action.payload;
     },
+    setNameEpisodes: (state, action: PayloadAction<string>) => {
+      state.nameEpisodes = action.payload;
+    },
   },
 });
 
-export const { setStatus, setSpecies, setGender, setName, setType, setDimension, setNameLocations } = filtersSlice.actions;
+export const { setStatus, setSpecies, setGender, setName, setType, setDimension, setNameLocations, setNameEpisodes } = filtersSlice.actions;
 export default filtersSlice.reducer;
