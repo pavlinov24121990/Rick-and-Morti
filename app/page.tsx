@@ -1,5 +1,4 @@
 'use server'
-import MainPicture from "../components/mainPicture";
 import MainPlusSearchPlusPaginate from "@/components/mainPlusSearchPlusPaginate";
 import MainPictureLocations from "./UI/mainPictureLocations";
 
