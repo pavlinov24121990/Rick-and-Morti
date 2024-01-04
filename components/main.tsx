@@ -5,7 +5,7 @@ import '/scss/main.scss';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/provider/redux/store";
 import { useEffect, useState } from 'react';
-import { fetchCharacter } from '@/app/api/route';
+import { fetchCharacter } from '@/app/character/[id]/api/route';
 import { LoadMoreValidate } from '@/helpers/LoadMoreValidate';
 import { setLoadMoreValid } from '@/provider/redux/paginationSlice';
 import { setCharacters } from '@/provider/redux/charactersSlice';
