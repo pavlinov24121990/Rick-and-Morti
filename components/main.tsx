@@ -5,7 +5,6 @@ import '/scss/main.scss';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/provider/redux/store";
 import { useEffect, useState } from 'react';
-import { fetchCharacter } from '@/app/character/[id]/api/route';
 import { LoadMoreValidate } from '@/helpers/LoadMoreValidate';
 import { setLoadMoreValid } from '@/provider/redux/paginationSlice';
 import { setCharacters } from '@/provider/redux/charactersSlice';
@@ -17,16 +16,19 @@ const Main: React.FC = () => {
   const { currentPage, loadMoreValid, loadMore } = useSelector((state: RootState) => state.paginationSlice);
   const charactersToShow = loadMoreValid ? characters?.results?.slice(loadMore).reverse() : characters?.results;
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
-    fetchCharacter(status, gender, species, name, currentPage)
-      .then((data) => {
-        dispatch(setCharacters(data));
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`/api?status=${status}&gender=${gender}&currentPage=${currentPage}&species=${species}&name=${name}`);
+        const data = await response.json();
+        dispatch(setCharacters(data.data));
         dispatch(setLoadMoreValid(LoadMoreValidate(status, gender, species, name)));
-      })
-      .catch((error) => {
-        console.error('Error fetching products:', error);
-      });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
   }, [status, gender, species, name, currentPage]);
 
   return (
