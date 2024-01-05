@@ -73,6 +73,7 @@ export interface Resident {
 }
 
 export interface Episode {
+  data: {
   air_date: string;
   characters: string[];
   created: string;
@@ -80,9 +81,27 @@ export interface Episode {
   id: number;
   name: string;
   url: string;
+  }
 }
 
 export interface EpisodesAndInfo {
   info: LocationInfo;
   results: Episode[];
+}
+
+export interface Episodes {
+  data: {
+    air_date: string;
+    characters: string[];
+    created: string;
+    episode: string;
+    id: number;
+    name: string;
+    url: string;
+  };
+}
+
+export interface EpisodeData {
+  [index: number]: Episodes;
+  length: number;
 }
