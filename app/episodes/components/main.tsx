@@ -1,4 +1,5 @@
 'use client'
+import { fetchEpisodes } from "@/helpers/fetchEpisodes";
 import { LoadMoreValidateEpisodes } from "@/helpers/LoadMoreValidate";
 import { setEpisodes } from "@/provider/redux/episodes";
 import { setLoadMoreValid } from "@/provider/redux/paginationSlice";
@@ -6,7 +7,6 @@ import { RootState } from "@/provider/redux/store";
 import Link from "next/link";
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { fetchEpisodes } from "../api/route";
 import '/scss/mainLocations.scss';
 
 
