@@ -1,9 +1,10 @@
 'use server'
 
 import ButtonGoBack from "@/app/UI/buttonGoBack"
+import { fetchResidentsShow } from "@/helpers/fetchResidentsShow"
+import { fetchShowLocations } from "@/helpers/fetchShowLocations"
 import Image from "next/image"
 import Link from "next/link"
-import { fetchResidentsShow, fetchShowLocations } from "../api/route"
 import '/scss/locationsShow.scss'
 
 export default async function Home({ params }: { params: { id: number } }) {

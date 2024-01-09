@@ -1,9 +1,10 @@
 'use server'
 
 import ButtonGoBack from "@/app/UI/buttonGoBack"
+import { fetchEpisodeCharactersShow } from "@/helpers/fetchEpisodeCharactersShow"
+import { fetchEpisodeShow } from "@/helpers/fetchEpisodeShow"
 import Image from "next/image"
 import Link from "next/link"
-import { fetchEpisodeCharactersShow, fetchEpisodeShow } from "../api/route"
 import '/scss/locationsShow.scss'
 
 

@@ -1,4 +1,5 @@
 'use client'
+import { fetchLocations } from '@/helpers/fetchLocations';
 import { LoadMoreValidateLocations } from '@/helpers/LoadMoreValidate';
 import { setLocations } from '@/provider/redux/locations';
 import { setLoadMoreValid } from '@/provider/redux/paginationSlice';
@@ -6,7 +7,6 @@ import { RootState } from '@/provider/redux/store';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchLocations } from '../api/route';
 import '/scss/mainLocations.scss';
 
 
