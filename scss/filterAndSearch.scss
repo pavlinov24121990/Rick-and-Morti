@@ -130,3 +130,12 @@
     }
   }
 }
+@media only screen and (min-device-width: 375px) and (max-device-width: 390px) and (orientation: landscape) {
+  .filterAndSearch {
+    div {
+      img {
+        left: 26%;
+      }
+    }
+  }
+}
