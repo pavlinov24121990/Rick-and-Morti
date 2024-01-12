@@ -264,3 +264,16 @@
     }
   }
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 390px) and (orientation: landscape) {
+  .character-show {
+    .informations-episodes {
+      .informations {
+        min-width: 350px;
+      }
+      .episodes {
+        min-width: 350px;
+      }
+    }
+  }
+}
