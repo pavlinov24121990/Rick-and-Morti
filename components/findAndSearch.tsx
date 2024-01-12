@@ -22,7 +22,7 @@ export default function FindAndSearch() {
       <div className='modals'>
         <Modals />
       </div>
-      <div>
+      <div className='find'>
         <select defaultValue={species} onChange={(event) => dispatch(setSpecies(handleChange(event)))}>
             <option value="">Species</option>
             <option value="Human">Human</option>
