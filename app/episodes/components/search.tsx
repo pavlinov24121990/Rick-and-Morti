@@ -14,7 +14,7 @@ export default function Search() {
 
   return (
     <div className="filterAndSearch">
-      <div>
+      <div className="search">
         <input className='episod' type="text" defaultValue={nameEpisodes} onChange={(event) => dispatch(setNameEpisodes(handleChange(event)))} placeholder="Filter by name or episode (ex. S01 or S01E02)" />
         <Image src={IconSearch} width={24} height={24} alt='Logo Search' />
       </div>

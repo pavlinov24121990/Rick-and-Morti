@@ -4,3 +4,18 @@
     min-width: 468px;
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .filterAndSearch {
+    .search {
+      display: block;
+      .episod {
+        min-width: 300px;
+        font-size: 11px;
+      }
+      img {
+        left: 10%;
+      }
+    }
+  }
+}
