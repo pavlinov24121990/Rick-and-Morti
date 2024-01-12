@@ -14,3 +14,9 @@
     }
   }
 }
+
+@media only screen and (min-device-width: 650px) and (max-device-width: 900px) and (orientation: landscape) {
+  .mainPicture {
+    padding-top: 67px;
+  }
+}
