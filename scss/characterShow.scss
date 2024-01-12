@@ -246,3 +246,21 @@
     }
   }
 }
+
+@media only screen and (min-device-width: 650px) and (max-device-width: 900px) and (orientation: landscape) {
+  .character-show {
+    padding-top: 80px;
+    .link {
+      top: 89px;
+      left: 50px;
+    }
+    .informations-episodes {
+      .informations {
+        min-width: 370px;
+      }
+      .episodes {
+        min-width: 370px;
+      }
+    }
+  }
+}
