@@ -6,6 +6,9 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 33px;
+  .modals {
+    display: none;
+  }
   div {
     position: relative;
     margin-right: 20px;
@@ -48,6 +51,42 @@
     background-position: 168px 14px;
     &:last-child {
       margin: 0px;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .filterAndSearch {
+    display: block;
+    div {
+      margin: 0px;
+      text-align: center;
+      img {
+        left: 20%;
+      }
+      margin-bottom: 16px;
+      &:last-child {
+        display: none;
+      }
+    }
+    .modals {
+      display: block;
+      button {
+        padding: 20px 40px;
+        border-radius: 4px;
+        background: #e3f2fd;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24),
+          0px 0px 2px 0px rgba(0, 0, 0, 0.12);
+        color: #2196f3;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+      }
     }
   }
 }

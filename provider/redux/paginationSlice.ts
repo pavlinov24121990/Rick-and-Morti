@@ -1,5 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { useEffect, useState } from 'react';
 
+
+  
 interface PaginationState {
   currentPage: number;
   loadMoreValid: boolean;
@@ -19,6 +22,8 @@ const initialState: PaginationState = {
   currentPageEpisodes: 1,
   loadMoreEpisodes: 12,
 };
+
+  
 
 const paginationSlice = createSlice({
   name: 'pagination',
